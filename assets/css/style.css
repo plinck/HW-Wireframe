@@ -7,7 +7,7 @@
 
 }
 body {
-    background-color: lightgray;
+    background-color: gray;
 }
 
 header, 
@@ -29,11 +29,15 @@ span.vCenter {
     vertical-align: middle;
     line-height: normal;
 }
+.container {
+    display: flex;
+    justify-items: center;
+}
 section {
     display: inline-table;
     border: 1px solid lightgray;
     width: 60%;
-    height: 200px;
+    height: auto;
     line-height: 100px;
     margin: 0 1.5% 1.5% auto;
     text-align: center;
@@ -44,8 +48,8 @@ section {
 aside {
     display: inline-block;
     border: 1px solid lightgray;
-    width: 37.5%;
-    height: 200px;
+    width: 38.5%;
+    height: auto;
     line-height: 100px;
     margin: 0 auto 1.5% 0;
     text-align: center;
@@ -68,13 +72,14 @@ table
     font-family: "SF Pro", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 95%;
-    margin: 0 auto 1.5% auto;
+    margin: 0 auto 1% auto;
 }
 
 td,
 th {
     border: 1px solid #ddd;
     padding: 0%;
+    margin: 0%;
 }
 
 th {
@@ -83,9 +88,19 @@ th {
     background-color: gray;
     color: white;
 }
+.outer {
+    padding: 0%;
+    background-color: gray;
+    color: white;
+}
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+tr {
+    color: gray;
+    background-color: white;
+    border: 6px solid gray;
+}
+tr.strong {
+    font-weight: bold;
 }
 
 tr:hover {
