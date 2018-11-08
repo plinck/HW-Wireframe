@@ -1,6 +1,6 @@
 /* Default font for all items */
 * {
-    font-family: "SF Pro", Arial, Helvetica, sans-serif;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     /* includes all except margin in width, height.  Way better than default*/
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -8,8 +8,13 @@
 
 }
 
+/* The instructions say to use 960 as width so I did.  I didnt really want to do this */
+/* because I want it to be mroe flexible based on window size, platform etc. */
 body {
-    background-color: gray;
+    background-color: #777;
+    color: #777;
+    width: 960px;
+    font-size: '18px';
 }
 
 /* header nav and footer mostly same.  Using line-height=height allows for vertical centering */
@@ -17,13 +22,13 @@ header,
 nav,
 footer {
     margin: 0px auto 1.5% auto;
-    border: 1px solid lightgray;
     width: 100%;
     height: 75px;
     line-height: 75px;
     text-align: center;
-    background-color: white;
-    color: gray;
+    border: 1px solid #ebebeb;
+    background-color: #ebebeb;
+    color: #777;
     opacity: 1;
 }
 
@@ -46,15 +51,16 @@ header {
 }
 
 /* section on left about 2/3rds and aside on right.  Very simlar otherwise */
+/* I did not fix these widths because I wanted them to be sized based on their */
+/* container and browser etc.  Fixing the width vs using % is just too restrictive */
 section,
 aside {
-    border: 1px solid lightgray;
     height: auto;
     line-height: 50px;
     text-align: center;
-    background-color: white;
-    color: gray;
-    opacity: 1;
+    border: 1px solid #ebebeb;
+    background-color: #ebebeb;
+    color: #777;
 }
 
 /* This has table inside so inline-table worked much better than inline-block */
@@ -81,29 +87,36 @@ footer {
 
 /* Common table styles */
 table {
-    /* display: inline-block; */
-    font-family: "SF Pro", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 95%;
     margin: 0 auto 1% auto;
+    line-height: 15px;
 }
 
 /* Most items I want same for tr, td and th in this case */
 tr,
 td,
 th {
-    border: 6px solid gray;
-    color: gray;
-    background-color: white;
+    border: 6px solid #777;
+    background-color: #ebebeb;
+    color: #777;
     padding: 0%;
     margin: 0%;
     font-weight: normal;
 }
 
-/* Header is different color - basically the opposite */
+/* Atricle is different color - basically the opposite */
 th {
-    background-color: gray;
-    color: white;
+    background-color: #777;
+    color: #ebebeb;
+    line-height: 40px;
+}
+
+/* header and paragraph */
+h1,
+p {
+    background-color: #ebebeb;
+    color: #777;
 }
 
 /* just to bold a small part */
