@@ -105,8 +105,8 @@ th {
     font-weight: normal;
 }
 
-/* Atricle is different color - basically the opposite */
-th {
+/* Article is different color - basically the opposite */
+.articleTitle {
     background-color: #777;
     color: #ebebeb;
     line-height: 40px;
