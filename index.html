@@ -12,28 +12,44 @@
 <!-- Body is where all displayable content goes-->
 
 <body>
+    <!-- Header and NAV are just simple boxes width of window -->
+    <!-- The span is used to center the text vertically in the box -->
+    <!-- Surprises me that there is not an easier way to do this  -->
     <header><span class="vCenter">header</span></header>
     <nav><span class="vCenter">nav</span></nav>
 
+    <!-- I attempted several ways to get these sections to line -->
+    <!-- up the way I wanted.  By far the best and most elegant way -->
+    <!-- was to use a container that was a flex display.  Using float -->
+    <!-- or just inline-block was cumbersome and not ideal -->
     <div class="container">
+        <!-- SECTION -->
         <section>
             <div>section</div>
+
+            <!-- Using Table within asection to organize articles -->
+            <!-- Clearly other ways to do it, but these worked nicely -->
             <table>
-                <tr><td class="outer">article
-                    <table>
-                        <tr class="strong">
-                            <td>h1, h2, h3</td>
-                        </tr>
-                        <tr>
-                            <td>p</td>
-                        </tr>
-                    </table>
-                </td></tr>
+                <tr>
+                    <th><div>article</div>
+                        <table>
+                            <tr>
+                                <td class="emphasize">h1, h2, h3</td>
+                            </tr>
+                            <tr>
+                                <td>p</td>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
             </table>
         </section>
+
+        <!-- ASIDE is on right side of browser, same height as section -->
         <aside>aside</aside>
     </div>
 
+    <!-- FOOTER -->
     <footer><span class="vCenter">footer</span></footer>
 
     <hr>

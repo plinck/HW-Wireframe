@@ -1,73 +1,86 @@
 /* Default font for all items */
 * {
     font-family: "SF Pro", Arial, Helvetica, sans-serif;
-    box-sizing: border-box;  /* includes all except margin in width, height: */
-    -webkit-box-sizing: border-box;
+    /* includes all except margin in width, height.  Way better than default*/
+    box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 
 }
+
 body {
     background-color: gray;
 }
 
-header, 
+/* header nav and footer mostly same.  Using line-height=height allows for vertical centering */
+header,
 nav,
 footer {
+    margin: 0px auto 1.5% auto;
     border: 1px solid lightgray;
     width: 100%;
-    height: 100px;
-    line-height: 100px;
-    margin: 0px auto 1.5% auto;
+    height: 75px;
+    line-height: 75px;
     text-align: center;
     background-color: white;
     color: gray;
     opacity: 1;
 }
+
 /* This seems to be the best way to veritcally align text inside box  vertical-aign doesnt work */
 span.vCenter {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
 }
+
+/* Slightly smaller margin after header*/
+header {
+    margin: 0px auto 1% auto;
+}
+
+/* Container is used to provide flex display for better positioning control of items within it */
 .container {
     display: flex;
     justify-items: center;
 }
+
+/* section on left about 2/3rds and aside on right.  Very simlar otherwise */
+section,
+aside {
+    border: 1px solid lightgray;
+    height: auto;
+    line-height: 50px;
+    text-align: center;
+    background-color: white;
+    color: gray;
+    opacity: 1;
+}
+
+/* This has table inside so inline-table worked much better than inline-block */
 section {
     display: inline-table;
-    border: 1px solid lightgray;
     width: 60%;
-    height: auto;
-    line-height: 100px;
     margin: 0 1.5% 1.5% auto;
-    text-align: center;
-    background-color: white;
-    color: gray;
-    opacity: 1;
 }
+
 aside {
     display: inline-block;
-    border: 1px solid lightgray;
     width: 38.5%;
-    height: auto;
-    line-height: 100px;
     margin: 0 auto 1.5% 0;
-    text-align: center;
-    background-color: white;
-    color: gray;
-    opacity: 1;
 }
+
+/* This was used when I was using float for the boxes.  Using float was a pain and */
+/* not recommended for this situation, but I left this in here so I can remember that */
+/* you must always clear the floats after using so the rest of html gets back on normal flow */
+/* float should really just be used when you want stuff to truly float / wrap around something */
 footer {
     clear: both;
-    margin-bottom: 0;  
+    margin-bottom: 0;
 }
 
-h1 {
-    color: red;
-}
-
-table
-{
+/* Common table styles */
+table {
     /* display: inline-block; */
     font-family: "SF Pro", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -75,42 +88,25 @@ table
     margin: 0 auto 1% auto;
 }
 
+/* Most items I want same for tr, td and th in this case */
+tr,
 td,
 th {
-    border: 1px solid #ddd;
-    padding: 0%;
-    margin: 0%;
-}
-
-th {
-    padding-top: 0%;
-    padding-bottom: 0%;
-    background-color: gray;
-    color: white;
-}
-.outer {
-    padding: 0%;
-    background-color: gray;
-    color: white;
-}
-
-tr {
+    border: 6px solid gray;
     color: gray;
     background-color: white;
-    border: 6px solid gray;
+    padding: 0%;
+    margin: 0%;
+    font-weight: normal;
 }
-tr.strong {
+
+/* Header is different color - basically the opposite */
+th {
+    background-color: gray;
+    color: white;
+}
+
+/* just to bold a small part */
+.emphasize {
     font-weight: bold;
-}
-
-tr:hover {
-    background-color: rgb(127, 174, 245);
-}
-
-/* Bonus lternate way of separating links without line breaks */
-/* put space between links */
-a.nav-link {
-    padding: 0px 10px;
-    word-wrap: normal;
-    display: inline-block;
 }
