@@ -48,6 +48,9 @@ header {
 .container {
     display: flex;
     justify-items: center;
+    flex-direction: row;
+    border: 1px solid gray;
+    padding: 0;
 }
 
 /* section on left about 2/3rds and aside on right.  Very simlar otherwise */
@@ -55,6 +58,7 @@ header {
 /* container and browser etc.  Fixing the width vs using % is just too restrictive */
 section,
 aside {
+    display: block;
     height: auto;
     line-height: 50px;
     text-align: center;
@@ -63,18 +67,42 @@ aside {
     color: #777;
 }
 
-/* This has table inside so inline-table worked much better than inline-block */
+/* Section takes up about 2/3 */
 section {
-    display: inline-table;
     width: 60%;
     margin: 0 1.5% 1.5% auto;
 }
 
+/* article takes up about 1/3 */
 aside {
-    display: inline-block;
-    width: 38.5%;
+    width: 40%;
     margin: 0 auto 1.5% 0;
 }
+
+/* article is a box with article name surrounding contents */
+article {
+    border: 1px solid #777;
+    margin: 5px;
+    text-align: center;
+    display: block;
+    background-color: #777;
+    color: #ebebeb;
+}
+
+/* title and content hold the article title and its */
+#title,
+#content {
+    border: 1px solid #777;
+    background: #ebebeb;
+    color: #777;
+    margin: 2%;
+}
+
+/* title is bold */
+#title {
+    font-weight: bold;
+}
+
 
 /* This was used when I was using float for the boxes.  Using float was a pain and */
 /* not recommended for this situation, but I left this in here so I can remember that */
@@ -83,43 +111,4 @@ aside {
 footer {
     clear: both;
     margin-bottom: 0;
-}
-
-/* Common table styles */
-table {
-    border-collapse: collapse;
-    width: 95%;
-    margin: 0 auto 1% auto;
-    line-height: 15px;
-}
-
-/* Most items I want same for tr, td and th in this case */
-tr,
-td,
-th {
-    border: 6px solid #777;
-    background-color: #ebebeb;
-    color: #777;
-    padding: 0%;
-    margin: 0%;
-    font-weight: normal;
-}
-
-/* Article is different color - basically the opposite */
-.articleTitle {
-    background-color: #777;
-    color: #ebebeb;
-    line-height: 40px;
-}
-
-/* header and paragraph */
-h1,
-p {
-    background-color: #ebebeb;
-    color: #777;
-}
-
-/* just to bold a small part */
-.emphasize {
-    font-weight: bold;
 }

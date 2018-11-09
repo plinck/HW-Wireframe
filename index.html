@@ -22,36 +22,19 @@
     <!-- up the way I wanted.  By far the best and most elegant way -->
     <!-- was to use a container that was a flex display.  Using float -->
     <!-- or just inline-block was cumbersome and not ideal -->
+    <!-- and took wau more code !! -->
+    <!-- outer container for section and aside -->
     <div class="container">
-        <!-- SECTION -->
-        <section>
-            <div>section</div>
 
-            <!-- Using Table within asection to organize articles -->
-            <!-- Clearly other ways to do it, but these worked nicely -->
+        <!-- SECTION -->
+        <section>section
 
             <!-- ARTICLE -->
-            <article>
-                <table>
-                    <tr>
-                        <th class="articleTitle">
-                            <div>article</div>
-                            <table>
-                                <tr>
-                                    <td class="emphasize">
-                                        <h1>h1, h2, h3</h1>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p>p</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </th>
-                    </tr>
-                </table>
+            <article>article
+                <div id="title">h1,h2,h3</div>
+                <div id="content">p</div>
             </article>
+            
         </section>
 
         <!-- ASIDE is on right side of browser, same height as section -->
